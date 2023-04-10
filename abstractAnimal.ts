@@ -16,6 +16,9 @@ class Tiger extends Animal {
   }
 }
 
+let tiger = new Tiger();
+console.log(tiger.makeSound());
+
 class Chicken extends Animal implements Edible {
   makeSound(): string {
     return "Chicken: Cluck cluck!";
@@ -25,14 +28,21 @@ class Chicken extends Animal implements Edible {
   }
 }
 
+let chicken = new Chicken();
+console.log(chicken.howtoEat(), chicken.makeSound());
+
 class Orange extends Fruit {
     howtoEat(): string {
-        return 'Peeled';
+        return 'Peeled Orange';
     };
 }
 
 class Apple extends Fruit {
     howtoEat(): string {
-        return 'Sliced';
+        return 'Sliced Apple';
     };
 }
+
+let orange = new Orange();
+let apple = new Apple();
+console.log(orange.howtoEat(), apple.howtoEat());
